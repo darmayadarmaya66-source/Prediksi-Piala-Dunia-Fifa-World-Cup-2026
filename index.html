@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prediksi Piala Dunia FIFA 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="field-lines"></div>
+<div class="floodlight"></div>
+
+<header>
+  <div class="eyebrow">Hackton Kuliah Web — Web App Challenge</div>
+  <h1 class="title">Prediksi <span>Piala Dunia</span><br>FIFA 2026</h1>
+  <p class="sub">Tebak skor Babak 16 Besar, susun bracket sampai final, dan kunci tebakan juara dunia. Poin masuk papan peringkat secara otomatis.</p>
+</header>
+
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="dashboard">Jadwal</button>
+  <button class="tab-btn" data-tab="bracket">Bracket</button>
+  <button class="tab-btn" data-tab="champion">Juara Dunia</button>
+  <button class="tab-btn" data-tab="leaderboard">Papan Peringkat</button>
+</nav>
+
+<main>
+
+  <section id="dashboard" class="active">
+    <h2 class="section-title">Babak 16 besar</h2>
+    <p class="section-desc">Isi nama dan tebakan skormu di setiap tiket. Wasit (admin) bisa memasukkan skor akhir resmi untuk menghitung poin secara otomatis.</p>
+    <div id="matchGrid" class="ticket-grid"></div>
+  </section>
+
+  <section id="bracket">
+    <h2 class="section-title">Susun bracket sampai final</h2>
+    <p class="section-desc">Klik tim yang kamu unggulkan di tiap babak untuk memajukan mereka ke ronde berikutnya.</p>
+    <div class="bracket-wrap">
+      <div class="bracket" id="bracketWrap"></div>
+    </div>
+  </section>
+
+  <section id="champion">
+    <h2 class="section-title">Tebak juara dunia 2026</h2>
+    <p class="section-desc">Tuliskan namamu dan satu negara yang kamu yakini akan menjadi juara dunia.</p>
+    <div class="champ-form">
+      <label for="champName">Nama kamu</label>
+      <input type="text" id="champName" placeholder="contoh: Andi Pratama">
+      <label for="champPick">Negara juara dunia</label>
+      <input type="text" id="champPick" placeholder="contoh: Argentina">
+      <button class="btn-predict" id="champSubmit" style="width:100%; padding:10px;">Kunci Tebakan</button>
+    </div>
+    <div class="champ-list" id="champList"></div>
+  </section>
+
+  <section id="leaderboard">
+    <h2 class="section-title">Papan peringkat</h2>
+    <p class="section-desc">10 poin untuk skor tepat persis, 5 poin untuk tebakan pemenang yang benar (skor beda), 20 poin bonus jika tebakan juara dunia tepat.</p>
+    <div id="lbWrap"></div>
+  </section>
+
+</main>
+
+<footer>BERKARYA · BERKOMPETISI · BERPRESTASI — data tersimpan sementara di memori browser ini</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
