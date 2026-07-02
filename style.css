@@ -1,4 +1,5 @@
-  :root{
+
+:root{
     --pitch:#0B1F1A;
     --surface:#10271F;
     --surface-2:#173228;
@@ -9,13 +10,13 @@
     --gold:#E3B23C;
     --gold-dim:#8A6C2A;
     --red:#C1473F;
-    --green-glow:#a83f8e;
+    --green-glow:#3FA86B;
   }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
   body{
     background:
-      radial-gradient(ellipse at top, rgba(212, 60, 199, 0.08), transparent 80%),
+      radial-gradient(ellipse at top, rgba(63,168,107,0.08), transparent 60%),
       var(--pitch);
     color:var(--chalk);
     font-family:'Inter',sans-serif;
@@ -30,17 +31,17 @@
     position:fixed; inset:0; pointer-events:none; z-index:0;
     background-image: repeating-linear-gradient(
       100deg,
-      rgba(131, 40, 140, 0.05) 0px, rgba(213, 76, 204, 0.05) 90px,
+      rgba(63,168,107,0.05) 0px, rgba(63,168,107,0.05) 90px,
       transparent 90px, transparent 180px
     );
   }
   .field-lines::after{
     content:""; position:absolute; inset:0;
-    background:radial-gradient(ellipse 60% 40% at 50% 0%, rgba(207, 46, 207, 0.07), transparent 70%);
+    background:radial-gradient(ellipse 60% 40% at 50% 0%, rgba(227,178,60,0.07), transparent 70%);
   }
   .floodlight{
     position:fixed; top:-200px; left:50%; width:1400px; height:600px;
-    background:conic-gradient(from 200deg at 50% 0%, transparent 0deg, rgba(225, 61, 173, 0.05) 8deg, transparent 16deg);
+    background:conic-gradient(from 200deg at 50% 0%, transparent 0deg, rgba(243,241,231,0.05) 8deg, transparent 16deg);
     transform:translateX(-50%); pointer-events:none; z-index:0;
     animation:sweep 14s ease-in-out infinite;
   }
@@ -78,7 +79,7 @@
   nav.tabs{
     position:sticky; top:0; z-index:5;
     display:flex; gap:0; justify-content:center;
-    background:rgba(194, 73, 188, 0.92); backdrop-filter:blur(8px);
+    background:rgba(11,31,26,0.92); backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line);
     overflow-x:auto;
   }
@@ -148,11 +149,7 @@
   }
   .teams-row{display:flex; align-items:center; justify-content:space-between; gap:8px;}
   .team{display:flex; align-items:center; gap:8px; flex:1;}
-  .team .flag{
-    width:30px; height:22px; object-fit:cover; border-radius:3px;
-    box-shadow:0 0 0 1px var(--line-strong); flex-shrink:0; display:inline-block;
-    background:var(--surface-2);
-  }
+  .team .flag{font-size:22px;}
   .team .name{font-size:14px; font-weight:600;}
   .vs-or-score{
     font-family:'Anton',sans-serif; font-size:13px; color:var(--gold-dim);
